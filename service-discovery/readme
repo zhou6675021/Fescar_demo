@@ -1,0 +1,15 @@
+Euraka注册中心服务
+
+单个注册中心服务
+ 只需要启动yml配置dev,就只启动单个注册中心服务
+
+集群化部署(目前只有个)：
+   启动2个相同的配置项目,分别修改yml文件到dev1,dev2，然后启动
+
+是否正确标准判断：
+  再启动一个cloud服务项目，修改
+  eureka.client.service-url.defaultZone=http://localhost:1001/eureka,http://localhost:1002/eureka
+  然后分别打开http://localhost:1001/和http://localhost:1002/
+  观察是否同时存在该cloud服务。都有即为正确
+
+

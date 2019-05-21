@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: service-discovery2
+#单个配置
+server:
+  port: 1002
+eureka:
+  server:
+    enable-self-preservation: true  #eureka自我保护机制
+  instance:
+    hostname: service-discovery2
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://service-discovery1:1001/eureka/
+
+
+
+
+
